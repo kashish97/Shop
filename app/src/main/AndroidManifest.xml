@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="in.codecorp.ssgcp.shop">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".Payment.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <activity android:name=".LauncherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" />
+        <activity android:name=".DetailsActivity" />
+        <activity android:name=".Payment.MainActivity" />
+        <activity android:name=".Paymentgateway" />
+
+        <provider
+            android:name=".MyContentProvider"
+            android:authorities="in.codecorp.shop.cp"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".CheckoutActivity" />
+        <activity android:name=".ProductActivity" />
+
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".CartActivity" />
+        <activity android:name=".RgisterActivity"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
